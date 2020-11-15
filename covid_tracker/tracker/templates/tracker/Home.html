@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Tracker</title>
+    <link rel="stylesheet" href="{% static 'tracker/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'tracker/css/bootstrap.css' %}">
+</head>
+<body>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+
+    <div class="container">
+        <h3 class="alert alert-info text-center mt-5">COVID-19 TRACKER APP</h3>
+        <div class="row">
+            <div class="col-sm-6">
+                    <div class="form-group">
+                        {% include 'tracker/country.html' %}
+                    </div>
+            </div>
+            <div class="col-sm-6">
+                <button class="btn btn-danger" id="refresh">Refresh</button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-sm-4 alert p-5" style="background-color: #ffd166;">
+                <p class="font-weight-bold test-secondary">New Confirmed
+                    <span class="float-right" id="newconfirmed">1</span>
+                </p>
+                <p class="font-weight-bold test-secondary">Total Confirmed
+                    <span class="float-right" id="totalconfirmed">2</span>
+                </p>
+            </div>
+            <div class="col-sm-3 alert offset-md-1 p-5" style="background-color: #06d6a0;">
+                <p class="font-weight-bold test-secondary">New Deaths
+                    <span class="float-right" id="newdeaths">3</span>
+                </p>
+                <p class="font-weight-bold test-secondary">Total Deaths
+                    <span class="float-right" id="totaldeaths">4</span>
+                </p>
+            </div>
+            <div class="col-sm-3 alert offset-md-1 p-5" style="background-color: #118ab2;">
+                <p class="font-weight-bold test-secondary">New Recovered
+                    <span class="float-right" id="newrecovered">5</span>
+                </p>
+                <p class="font-weight-bold test-secondary">Total Recovered
+                    <span class="float-right" id="totalrecovered">6</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+<script src="{% static 'tracker/js/all.min.js' %}"></script>
+<script src="{% static 'tracker/js/jquery.js' %}"></script>
+<script src="{% static 'tracker/js/bootstrap.js' %}"></script>
+<script src="{% static 'tracker/js/popper.js' %}"></script>
+<script src="{% static 'tracker/js/custom.js' %}"></script>
+</body>
+</html>

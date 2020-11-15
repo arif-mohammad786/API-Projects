@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>header}}
+    <title>Home</title>
+</head>
+<body>
+
+  {{>navbar}}
+
+    <div class="container-fluid main_header mt-5">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <div class="col-sm-6 offset-md-3">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <input style="border-radius:20px;" id="getcity" type="text" class=" text-white form-control bg-dark" placeholder="Enter City Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button style="border-radius:20px;" id="search" class="btn btn-primary" type="button" id="button-addon2">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 offset-md-4 mt-3 text-white">
+                        <div class="card bg-dark">
+                            <h5 class="card-header" id="day_date">Tuesday<span class="float-right">13 Oct</span></h5>
+                            <div class="card-body">
+                                <h6 class="card-title" id="error"></h6>
+                                <h5 id="city_country" class="text-center mb-3"></h5>
+                                <h1 class="card-title d-inline" style="margin-right: 50px;" id="temp"></h1>
+                                <span class="d-inline" id="status"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+ {{>footer}}
+ <script src="js/main.js"></script>
+</body>
+</html>

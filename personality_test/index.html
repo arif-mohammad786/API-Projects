@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Personality Test</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="font-weight-bold text-center pt-5 text-danger">WHAT DOES YOUR NAME SAYS ABOUT YOUR PERSONALITY ??</h3>
+    <div class="container bg-secondary mt-5 text-center img-thumbnail" style="height: 430px;width:700px;">
+        <h3 class="pt-3 text-white">Enter Your Name</h3>
+        <input type="text" id="name" class="pt-2 bg-info mb-4"><br>
+        <span id="error" class="text-warning font-weight-bold"></span><br>
+        <img src="pic.jpg" alt="Image" height="200px" width="200px" class="img-thumbnail" id="imageid"><br><br>
+        <button class="btn btn-primary mb-5" id="clickme">Click Here</button>
+    </div>
+
+<script src="js/all.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/popper.js"></script>
+<script>
+    $("#clickme").click(()=>{
+        var a=$("#name").val();
+        if(a==""){
+            document.getElementById("error").innerHTML="Please Enter Some Name!";
+        }
+        else{
+            $("#imageid").attr('src',`https://joeschmoe.io/api/v1/${a}`);
+
+        }
+    });
+</script>
+</body>
+</html>
